@@ -1,0 +1,101 @@
+/* #root{
+    all: unset;
+}
+
+.hero-bg{
+    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.1)), url("hero.png");;
+    width:100vw !important;
+    min-height: 100vh !important;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+.sectionHeight {
+    height: 100vh;
+    width: auto;
+}
+.footer{
+    width: 100vw;
+}
+#root  {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+html{
+    padding: 0 !important;
+    margin: 0 !important;
+}
+.tv-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .video-inside-tv {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%; 
+    height: 45%; 
+    z-index: 1; 
+    
+  }
+  .hover-underline:hover {
+    text-decoration: underline;
+  } */
+
+
+  @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.hero-bg {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1)), url("/hero.png");
+}
+
+.shimmer {
+	animation: shimmer 2s infinite linear;
+	background: linear-gradient(to right, #2c2c2c 4%, #333 25%, #2c2c2c 36%);
+	background-size: 1000px 100%;
+}
+
+@keyframes shimmer {
+	0% {
+		background-position: -1000px 0;
+	}
+	100% {
+		background-position: 1000px 0;
+	}
+}
+
+.error-page--content::before {
+	background: radial-gradient(
+		ellipse at center,
+		rgba(0, 0, 0, 0.5) 0,
+		rgba(0, 0, 0, 0.2) 45%,
+		rgba(0, 0, 0, 0.1) 55%,
+		transparent 70%
+	);
+	bottom: -10vw;
+	content: "";
+	left: 10vw;
+	position: absolute;
+	right: 10vw;
+	top: -10vw;
+	z-index: -1;
+}
+
+::-webkit-scrollbar {
+	width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #4b5563;
+	border-radius: 6px;
+}
+
+::-webkit-scrollbar-track {
+	background-color: #1a202c;
+}
